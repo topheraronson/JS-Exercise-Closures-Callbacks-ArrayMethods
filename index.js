@@ -350,8 +350,18 @@ function counter2() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit(/* CODE HERE */) {
-  /* CODE HERE */
+function counterMakerWithLimit(max_count) {
+  let count = -1;
+
+  return () => {
+
+    if(count >= max_count) {
+      count = 0;
+      return count;
+    }
+    count++;
+    return count;
+  }
 }
 
 /////////////// END OF CHALLENGE ///////////////
