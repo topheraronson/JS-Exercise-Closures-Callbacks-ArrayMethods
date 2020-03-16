@@ -155,8 +155,14 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * 
  * [2] Invoking `lowerCaseStrings` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
 */
-function lowerCaseStrings(/* code here */) {
-  /* code here */
+function lowerCaseStrings(strings) {
+  const loweCasedStrings = [];
+
+  strings.forEach((string) => {
+    loweCasedStrings.push(string.toLowerCase());
+  })
+
+  return loweCasedStrings;
 }
 
 /**
@@ -174,8 +180,8 @@ function lowerCaseStrings(/* code here */) {
  * 
  * [2] Invoking `isItAnApple` with `['a', 'b', 'c' ]` will return `[ false, false, false ]`.
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(strings) {
+  return strings.map( string => string == 'apple');
 }
 
 /**
